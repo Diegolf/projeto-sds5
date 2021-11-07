@@ -1,3 +1,4 @@
+import { Paginable } from 'components/pagination';
 import { Seller } from './seller';
 
 export type Sale = {
@@ -9,12 +10,7 @@ export type Sale = {
     seller: Seller;
 }
 
-export type SalePage = {    
-    last: boolean; 
-    totalPages: number;
-    totalElements: number;
-    number: number;
-    first: boolean;
+export type SalePage = Paginable & {
     numberOfElements?: number;
     size?: number;
     empty?: boolean;
